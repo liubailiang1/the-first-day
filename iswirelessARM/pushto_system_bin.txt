@@ -1,0 +1,73 @@
+Microsoft Windows [版本 6.1.7601]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Program Files\ConEmu>adb devices
+List of devices attached
+0123456789ABCDEF        device
+
+
+C:\Program Files\ConEmu>adb remount
+remount succeeded
+
+C:\Program Files\ConEmu>adb shell
+root@android:/ # ls /mnt/sdcard/zhangbin/
+ls /mnt/sdcard/zhangbin/
+h264_testenc
+root@android:/ # adb push X:\codeStore\testCODE\testC\iswirelessARM\libs\armeabi\is_wireless_arm  ^C
+C:\Program Files\ConEmu>adb push X:\codeStore\testCODE\testC\iswirelessARM\libs\armeabi\is_wireless_arm /mnt/sdcard/zhangbin/
+132 KB/s (13592 bytes in 0.100s)
+
+C:\Program Files\ConEmu>adb shell
+root@android:/ # cd /mnt/sdcard/zhangbin/
+cd /mnt/sdcard/zhangbin/
+root@android:/mnt/sdcard/zhangbin # ls
+ls
+h264_testenc
+is_wireless_arm
+root@android:/mnt/sdcard/zhangbin # ls -al
+ls -al
+-rwxrwxr-x system   sdcard_rw   385654 2014-09-10 13:08 h264_testenc
+-rwxrwxr-x system   sdcard_rw    13592 2014-10-17 13:35 is_wireless_arm
+root@android:/mnt/sdcard/zhangbin # ./is_wireless_arm
+./is_wireless_arm
+/system/bin/sh: ./is_wireless_arm: can't execute: Permission denied
+126|root@android:/mnt/sdcard/zhangbin # chmod 777 *
+chmod 777 *
+root@android:/mnt/sdcard/zhangbin # ./is_wireless_arm
+./is_wireless_arm
+/system/bin/sh: ./is_wireless_arm: can't execute: Permission denied
+126|root@android:/mnt/sdcard/zhangbin # chmod +x *
+chmod +x *
+Bad mode
+10|root@android:/mnt/sdcard/zhangbin # ./is_wireless_arm
+./is_wireless_arm
+/system/bin/sh: ./is_wireless_arm: can't execute: Permission denied
+126|root@android:/mnt/sdcard/zhangbin # ls -al
+ls -al
+-rwxrwxr-x system   sdcard_rw   385654 2014-09-10 13:08 h264_testenc
+-rwxrwxr-x system   sdcard_rw    13592 2014-10-17 13:35 is_wireless_arm
+root@android:/mnt/sdcard/zhangbin # exit
+exit
+
+C:\Program Files\ConEmu>adb push X:\codeStore\testCODE\testC\iswirelessARM\libs\armeabi\is_wireless_arm /mnt/sdcard/zhangbin/
+168 KB/s (13592 bytes in 0.079s)
+
+C:\Program Files\ConEmu>adb shell
+root@android:/ # cd /mnt/sdcard/zhangbin/
+cd /mnt/sdcard/zhangbin/
+root@android:/mnt/sdcard/zhangbin # ls -al
+ls -al
+-rwxrwxr-x system   sdcard_rw   385654 2014-09-10 13:08 h264_testenc
+-rwxrwxr-x system   sdcard_rw    13592 2014-10-17 13:35 is_wireless_arm
+root@android:/mnt/sdcard/zhangbin # ./is_wireless_arm
+./is_wireless_arm
+/system/bin/sh: ./is_wireless_arm: can't execute: Permission denied
+126|root@android:/mnt/sdcard/zhangbin # cp is_wireless_arm /system/bin/
+cp is_wireless_arm /system/bin/
+root@android:/mnt/sdcard/zhangbin # is_wireless_arm
+is_wireless_arm
+interface lo is not wireless
+interface sit0 is not wireless
+interface wlan0 is wireless: IEEE 802.11bgn
+interface p2p0 is wireless: unassociated
+root@android:/mnt/sdcard/zhangbin #
