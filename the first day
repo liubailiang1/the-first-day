@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>weilei</title>
+		<style type="text/css">
+	    .box{
+	    background-color: pink;
+	    height: 50px;
+	    text-align: center;
+	  	
+	    }
+	    a{
+	    color: black;
+	    text-decoration: none;
+	    font-family: "微软雅黑";
+	    font-weight:bold;
+	    width: 100px;
+	    height: 50px;
+	    display: inline-block;
+	    	
+	    }
+	    a.one{
+	    color: red;	
+	    }
+	    a:hover{
+	    text-decoration: underline;
+	    color: blue;
+	    background-color: lightgray;	
+	    }
+	  
+		</style>
+		
+	</head>
+	<body>
+	<div class="box">
+	<a href="#"class="one">天猫</a>
+	<a href="#"class="one">聚划算</a>
+	<a href="#"class="one">超市</a>
+	<a href="#"class="one">头条</a>
+	<a href="#">阿里旅行</a>
+	<a href="#">电器城</a>
+	<a href="#">淘宝</a>
+	<a href="#">周边</a>
+	<a href="#">旅行</a>
+	</div>
+	
+	</body>
+</html>
